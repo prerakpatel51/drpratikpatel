@@ -15,6 +15,11 @@ ALLOWED_HOSTS = [
     if host.strip()
 ]
 
+# These remain empty until the independent Google Business Profile is ready.
+# Once added in Railway, the website automatically displays its review links.
+GOOGLE_REVIEW_URL = os.environ.get("GOOGLE_REVIEW_URL", "").strip()
+GOOGLE_REVIEW_WRITE_URL = os.environ.get("GOOGLE_REVIEW_WRITE_URL", "").strip()
+
 INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.staticfiles",
