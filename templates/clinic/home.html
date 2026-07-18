@@ -1,0 +1,190 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dr. Pratik Patel, MD | Internal Medicine in Melbourne, FL</title>
+  <meta name="description" content="Personalized adult internal medicine, preventive care, chronic condition management, and medically supervised weight planning with Dr. Pratik Patel in Melbourne, Florida.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dr. Pratik Patel, MD | Internal Medicine">
+  <meta property="og:description" content="Thoughtful, physician-led care for adult health and medically supervised weight planning in Melbourne, Florida.">
+  <meta property="og:image" content="{{ request.scheme }}://{{ request.get_host }}{% static 'clinic/images/og.png' %}">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="{% static 'clinic/images/favicon.svg' %}" type="image/svg+xml">
+  <link rel="stylesheet" href="{% static 'clinic/css/site.css' %}">
+  <script src="{% static 'clinic/js/site.js' %}" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    "name": "Dr. Pratik Patel, MD",
+    "image": "{{ request.scheme }}://{{ request.get_host }}{% static 'clinic/images/dr-pratik-patel.png' %}",
+    "telephone": "+1-321-255-4003",
+    "medicalSpecialty": "Internal Medicine",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "8041 Spyglass Hill Rd, Suite 102",
+      "addressLocality": "Melbourne",
+      "addressRegion": "FL",
+      "postalCode": "32940",
+      "addressCountry": "US"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <nav class="shell nav" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Dr. Pratik Patel home">
+        <span class="monogram" aria-hidden="true">PP</span>
+        <span>
+          <span class="brand-name">Pratik Patel, MD</span>
+          <span class="brand-label">Internal Medicine · Melbourne, Florida</span>
+        </span>
+      </a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-menu">Menu</button>
+      <div class="nav-right" id="site-menu">
+        <a class="nav-link" href="#care">Care &amp; services</a>
+        <a class="nav-link" href="#about">Meet Dr. Patel</a>
+        <a class="nav-link" href="#visit">Visit the clinic</a>
+        <a class="phone-pill" href="tel:+13212554003">(321) 255-4003</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="shell hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Personalized adult medicine</p>
+        <h1 id="hero-title">Care that listens first—and plans <em>with you.</em></h1>
+        <p class="lead">Dr. Pratik Patel provides thoughtful internal medicine for adults, from preventive visits and ongoing condition management to medically supervised support for healthy weight loss or gain.</p>
+        <p class="supporting-copy">Every visit starts with your complete health picture, so recommendations are clear, practical, and appropriate for your individual needs.</p>
+        <div class="actions">
+          <a class="button primary" href="tel:+13212554003">Call the office <span aria-hidden="true">→</span></a>
+          <a class="button secondary" href="https://www.google.com/maps/search/?api=1&amp;query=8041+Spyglass+Hill+Rd+Suite+102+Melbourne+FL+32940">Get directions <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="credential"><span aria-hidden="true"></span>Board-Certified Internal Medicine · Melbourne / Viera</p>
+      </div>
+      <div class="hero-portrait">
+        <div class="portrait-orbit" aria-hidden="true"></div>
+        <img class="portrait" src="{% static 'clinic/images/dr-pratik-patel.png' %}" width="225" height="225" alt="Dr. Pratik Patel">
+        <div class="care-card"><strong>Personal care,<br>clearly explained.</strong><span>A collaborative approach to everyday health and long-term goals.</span></div>
+        <p class="portrait-caption">Pratik Patel, MD<br><span>Internal Medicine</span></p>
+      </div>
+    </section>
+
+    <section class="care-section" id="care" aria-labelledby="care-title">
+      <div class="shell care-layout">
+        <div class="section-intro">
+          <p class="eyebrow light">How we can help</p>
+          <h2 id="care-title">One physician. Your whole health picture.</h2>
+          <p>Internal medicine connects the details. Dr. Patel looks beyond a single symptom to understand how your history, daily life, medications, and long-term goals fit together.</p>
+        </div>
+        <div class="service-grid">
+          {% for service in services %}
+          <article class="service">
+            <span class="service-number">{{ service.number }}</span>
+            <h3>{{ service.title }}</h3>
+            <p>{{ service.description }}</p>
+          </article>
+          {% endfor %}
+        </div>
+        <p class="safety-note">Prescription treatment requires an individual medical evaluation, diagnosis, and review of clinical appropriateness, risks, and eligibility. No medication or result is guaranteed.</p>
+      </div>
+    </section>
+
+    <section class="shell about" id="about" aria-labelledby="about-title">
+      <div class="about-portrait">
+        <img src="{% static 'clinic/images/dr-pratik-patel.png' %}" width="225" height="225" alt="Dr. Pratik Patel">
+        <div class="about-accent" aria-hidden="true"></div>
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow">Meet your physician</p>
+        <h2 id="about-title">Pratik Patel, MD</h2>
+        <p class="about-lead">Board-certified in internal medicine and caring for adults in Melbourne, Florida.</p>
+        <p>Dr. Patel graduated from N.H.L. Municipal Medical College, Gujarat University, Ahmedabad, India, in 2002. His approach to internal medicine emphasizes attentive listening, clear explanations, and care plans that patients can understand and follow.</p>
+        <p>Whether you are managing an ongoing condition, checking in on preventive health, or working toward a healthier weight, the goal is the same: informed decisions and steady, personalized support.</p>
+        <div class="affiliations" aria-label="Hospital affiliations">
+          <span>Hospital affiliations</span>
+          <ul>
+            <li>Holmes Regional Medical Center</li>
+            <li>Viera Hospital</li>
+            <li>Melbourne Regional Medical Center</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="approach-section" aria-labelledby="approach-title">
+      <div class="shell">
+        <div class="approach-heading">
+          <p class="eyebrow">A clearer path forward</p>
+          <h2 id="approach-title">Care built around understanding—not assumptions.</h2>
+        </div>
+        <div class="approach-grid">
+          <article><span>01</span><h3>Listen</h3><p>Start with your concerns, health history, current treatment, and what you want to improve.</p></article>
+          <article><span>02</span><h3>Evaluate</h3><p>Review the clinical details and identify the safest, most useful next steps for you.</p></article>
+          <article><span>03</span><h3>Plan together</h3><p>Leave with a clear plan, realistic expectations, and a better understanding of your care.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="weight-section" id="weight-care" aria-labelledby="weight-title">
+      <div class="shell weight-layout">
+        <div>
+          <p class="eyebrow">Medically supervised weight planning</p>
+          <h2 id="weight-title">A healthier weight plan should begin with your health—not a trend.</h2>
+        </div>
+        <div class="weight-copy">
+          <p>Healthy weight loss, gain, or maintenance can be influenced by nutrition, activity, sleep, medical conditions, and current medications. Dr. Patel begins with a clinical evaluation and helps shape a practical plan around the factors that apply to you.</p>
+          <p>When clinically appropriate, a visit may include a discussion of prescription options such as GLP-1 medicines. Ozempic® is FDA-approved for specific uses in adults with type 2 diabetes; it is not FDA-approved as a weight-loss medication. Treatment decisions depend on diagnosis, safety, and individual eligibility.</p>
+          <a class="text-link" href="tel:+13212554003">Call to discuss an appointment <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="shell visit" id="visit" aria-labelledby="visit-title">
+      <div class="visit-copy">
+        <p class="eyebrow">Visit the clinic</p>
+        <h2 id="visit-title">Adult medical care, close to home.</h2>
+        <p class="visit-intro">Call the office to ask about scheduling, appointment availability, and what to bring to your visit.</p>
+        <address>8041 Spyglass Hill Rd, Suite 102<br>Melbourne, FL 32940</address>
+        <a class="visit-phone" href="tel:+13212554003">(321) 255-4003</a>
+        <div class="visit-actions">
+          <a class="button primary" href="tel:+13212554003">Call the office</a>
+          <a class="button secondary" href="https://www.google.com/maps/search/?api=1&amp;query=8041+Spyglass+Hill+Rd+Suite+102+Melbourne+FL+32940">Open in Google Maps ↗</a>
+        </div>
+      </div>
+      <a class="map-card" href="https://www.google.com/maps/search/?api=1&amp;query=8041+Spyglass+Hill+Rd+Suite+102+Melbourne+FL+32940" aria-label="Get directions to Dr. Patel's clinic in Google Maps">
+        <span class="map-road road-one" aria-hidden="true"></span><span class="map-road road-two" aria-hidden="true"></span><span class="map-road road-three" aria-hidden="true"></span>
+        <span class="map-pin" aria-hidden="true"><i></i></span>
+        <span class="map-label">Spyglass Hill Rd<br><strong>Suite 102</strong></span>
+      </a>
+    </section>
+
+    <section class="faq-section" aria-labelledby="faq-title">
+      <div class="shell faq-layout">
+        <div><p class="eyebrow">Common questions</p><h2 id="faq-title">Before you call</h2></div>
+        <div class="faq-list">
+          <details><summary>What does an internal medicine physician treat?</summary><p>Internal medicine physicians care for adults, including preventive health needs, new symptoms, and ongoing medical conditions. Your visit and treatment plan depend on your individual needs.</p></details>
+          <details><summary>Does Dr. Patel offer weight-management visits?</summary><p>Yes. Visits may address medically supervised support for healthy weight loss, weight gain, or maintenance based on your health history, clinical needs, and goals.</p></details>
+          <details><summary>Can I request Ozempic or another GLP-1 medicine?</summary><p>You may discuss medication options during a visit. A prescription is not guaranteed and requires an appropriate diagnosis, a medical and safety evaluation, and individual eligibility.</p></details>
+          <details><summary>How do I make an appointment?</summary><p>Call the office at <a href="tel:+13212554003">(321) 255-4003</a>. The office can confirm scheduling, availability, and what to bring.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-grid">
+      <a class="brand footer-brand" href="#top"><span class="monogram" aria-hidden="true">PP</span><span><span class="brand-name">Pratik Patel, MD</span><span class="brand-label">Internal Medicine</span></span></a>
+      <div><strong>Clinic</strong><p>8041 Spyglass Hill Rd, Suite 102<br>Melbourne, FL 32940</p></div>
+      <div><strong>Contact</strong><p><a href="tel:+13212554003">(321) 255-4003</a><br><a href="https://www.google.com/maps/search/?api=1&amp;query=8041+Spyglass+Hill+Rd+Suite+102+Melbourne+FL+32940">Get directions</a></p></div>
+    </div>
+    <div class="shell legal"><p>This website provides general information and does not replace professional medical advice, diagnosis, or treatment. If you have a medical emergency, call 911.</p><p>Ozempic® is a registered trademark of Novo Nordisk A/S. No affiliation or endorsement is implied.</p></div>
+    <p class="copyright">© <span data-current-year></span> Dr. Pratik Patel. All rights reserved.</p>
+  </footer>
+</body>
+</html>
