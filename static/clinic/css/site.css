@@ -188,9 +188,13 @@ footer { padding: 65px 0 30px; color: white; background: #22342b; }
   .lead { font-size: 17px; }
   .actions { align-items: stretch; flex-direction: column; }
   .button { width: 100%; }
-  .hero-portrait { min-height: 470px; }
-  .portrait { width: 58%; }
-  .care-card { left: 16px; bottom: 16px; width: 230px; padding: 20px; }
+  .hero-portrait { min-height: 600px; }
+  .hero-portrait::before { inset: auto -24% -14% 16%; height: 46%; }
+  .portrait-orbit { top: 30%; width: 76%; }
+  .portrait { top: 30%; width: 60%; }
+  .care-card { left: 16px; right: 16px; bottom: 16px; width: auto; padding: 22px 23px; }
+  .care-card strong { font-size: 22px; }
+  .care-card span { font-size: 12px; line-height: 1.6; }
   .portrait-caption { display: none; }
   .care-section { padding-block: 68px; }
   .service-grid { grid-template-columns: 1fr; }
